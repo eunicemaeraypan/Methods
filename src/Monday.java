@@ -7,6 +7,9 @@ public class Monday {
 
     public static void main(String[] args) {
 
+        String str = "Eunice";
+        countVowels(str);
+
         String string = "The quick brown fox jumps over the lazy dog";
         System.out.println(wordcount(string) + " words");
 
@@ -46,6 +49,24 @@ public class Monday {
                 count++;
         }
         return count;
+
+
+    }
+
+    public static void countVowels(String str){
+        int vowelCount = 0;
+        for(int i=0; i<str.length(); i++){
+        if(isVowel(str.charAt(i))){
+            ++vowelCount;
+        }else{
+            System.out.println("Vowel Count=" + vowelCount);
+        }
+
+        }
+    }
+    public static boolean isVowel(char ch){
+        ch=Character.toUpperCase(ch);
+        return (ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U');
     }
 
 }
